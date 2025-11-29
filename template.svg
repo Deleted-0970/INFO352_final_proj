@@ -1,0 +1,103 @@
+<svg width="1200" height="380" viewBox="0 0 1200 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .font-main { font-family: Arial, sans-serif; font-weight: bold; }
+      .font-sub { font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+    </style>
+  </defs>
+
+  <g id="Panel_1">
+    <rect x="0" y="0" width="300" height="380" fill="white" stroke="#ccc"/>
+    <rect x="0" y="0" width="300" height="100" fill="#B71C1C"/>
+    
+    <text x="30" y="45" fill="white" class="font-main" font-size="24">I NEED AN</text>
+    <text x="30" y="75" fill="white" class="font-main" font-size="24">INTERPRETER</text>
+    <text x="30" y="95" fill="white" class="font-sub" font-size="12" opacity="0.9">({{HEADER_SUB}})</text>
+    
+    <text x="20" y="130" fill="#444" font-family="Arial" font-size="10">My Preferred Language:</text>
+    <text x="150" y="180" text-anchor="middle" fill="#0D47A1" class="font-main" font-size="{{SIZE_LANG}}">{{LANG_EN}}</text>
+    <text x="150" y="220" text-anchor="middle" fill="#0D47A1" class="font-sub" font-size="28">({{LANG_NATIVE}})</text>
+    
+    <text x="20" y="280" fill="black" font-family="Arial" font-size="12">Name ({{LBL_NAME}}):</text>
+    <line x1="20" y1="300" x2="280" y2="300" stroke="black"/>
+    <text x="20" y="330" fill="black" font-family="Arial" font-size="12">Emergency Phone ({{LBL_PHONE}}):</text>
+    <line x1="20" y1="350" x2="280" y2="350" stroke="black"/>
+  </g>
+
+  <g id="Panel_2" transform="translate(300, 0)">
+    <rect x="0" y="0" width="300" height="380" fill="#E3F2FD" stroke="#ccc"/>
+    
+    <text x="150" y="40" text-anchor="middle" fill="#01579B" class="font-main" font-size="22">IMMEDIATE NEEDS</text>
+    <text x="150" y="65" text-anchor="middle" fill="#01579B" class="font-sub" font-size="14">({{NEEDS_SUB}})</text>
+    
+    <text x="20" y="100" class="font-main" font-size="12" fill="black">PAIN SCALE ({{PAIN_SUB}}):</text>
+    
+    <g transform="translate(15, 115)">
+       <circle cx="10" cy="10" r="10" fill="#A5D6A7" stroke="#333"/><text x="10" y="14" text-anchor="middle" font-size="10" fill="black">1</text>
+       <circle cx="35" cy="10" r="10" fill="#A5D6A7" stroke="#333"/><text x="35" y="14" text-anchor="middle" font-size="10" fill="black">2</text>
+       <circle cx="60" cy="10" r="10" fill="#C5E1A5" stroke="#333"/><text x="60" y="14" text-anchor="middle" font-size="10" fill="black">3</text>
+       <circle cx="85" cy="10" r="10" fill="#C5E1A5" stroke="#333"/><text x="85" y="14" text-anchor="middle" font-size="10" fill="black">4</text>
+       <circle cx="110" cy="10" r="10" fill="#FFF59D" stroke="#333"/><text x="110" y="14" text-anchor="middle" font-size="10" fill="black">5</text>
+       <circle cx="135" cy="10" r="10" fill="#FFF59D" stroke="#333"/><text x="135" y="14" text-anchor="middle" font-size="10" fill="black">6</text>
+       <circle cx="160" cy="10" r="10" fill="#FFCC80" stroke="#333"/><text x="160" y="14" text-anchor="middle" font-size="10" fill="black">7</text>
+       <circle cx="185" cy="10" r="10" fill="#FFCC80" stroke="#333"/><text x="185" y="14" text-anchor="middle" font-size="10" fill="black">8</text>
+       <circle cx="210" cy="10" r="10" fill="#D32F2F" stroke="#333"/><text x="210" y="14" text-anchor="middle" font-size="10" fill="white">9</text>
+       <circle cx="235" cy="10" r="10" fill="#B71C1C" stroke="#333"/><text x="235" y="14" text-anchor="middle" font-size="10" fill="white">10</text>
+    </g>
+
+    <text x="150" y="160" text-anchor="middle" font-size="12" fill="black">Circle where it hurts ({{CIRCLE_SUB}}):</text>
+    
+    <g transform="translate(150, 235)" stroke="black" stroke-width="3" fill="none">
+        <circle cx="0" cy="-25" r="15" /> 
+        <line x1="0" y1="-10" x2="0" y2="60" /> 
+        <line x1="-30" y1="10" x2="30" y2="10" /> 
+        <line x1="0" y1="60" x2="-25" y2="110" /> 
+        <line x1="0" y1="60" x2="25" y2="110" /> 
+    </g>
+  </g>
+
+  <g id="Panel_3" transform="translate(600, 0)">
+    <rect x="0" y="0" width="300" height="380" fill="#E8F5E9" stroke="#ccc"/>
+    
+    <text x="20" y="40" fill="#1B5E20" class="font-main" font-size="22">MEDICAL HISTORY</text>
+    <text x="20" y="65" fill="#1B5E20" class="font-sub" font-size="14">({{HISTORY_SUB}})</text>
+    
+    <text x="20" y="95" fill="#C62828" class="font-main" font-size="14">⚠ ALLERGIES ({{ALLERGY_SUB}}):</text>
+    <rect x="20" y="105" width="260" height="35" fill="white" stroke="#2E7D32"/>
+    
+    <text x="20" y="170" fill="black" class="font-main" font-size="14">MEDICATIONS ({{MEDS_SUB}}):</text>
+    
+    <rect x="20" y="180" width="260" height="180" fill="white" stroke="black"/>
+    <line x1="180" y1="180" x2="180" y2="360" stroke="black"/>
+    <line x1="20" y1="210" x2="280" y2="210" stroke="black"/>
+    <line x1="20" y1="260" x2="280" y2="260" stroke="#ccc"/>
+    <line x1="20" y1="310" x2="280" y2="310" stroke="#ccc"/>
+    
+    <text x="25" y="200" font-size="10" font-weight="bold" fill="black">NAME ({{MED_NAME}})</text>
+    <text x="190" y="200" font-size="10" font-weight="bold" fill="black">DOSE ({{MED_DOSE}})</text>
+  </g>
+
+  <g id="Panel_4" transform="translate(900, 0)">
+    <rect x="0" y="0" width="300" height="380" fill="#FFF9C4" stroke="#ccc"/>
+    
+    <text x="20" y="40" fill="#BF360C" class="font-main" font-size="22">FINANCIAL RIGHTS</text>
+    <text x="20" y="65" fill="#BF360C" class="font-sub" font-size="14">({{FINANCIAL_SUB}})</text>
+    
+    <text x="20" y="100" font-size="12" fill="black">Insurance Provider ({{LBL_INSURANCE}}):</text>
+    <line x1="20" y1="120" x2="280" y2="120" stroke="black"/>
+    
+    <text x="20" y="150" font-size="12" fill="black">Member ID ({{LBL_ID}}):</text>
+    <line x1="20" y1="170" x2="280" y2="170" stroke="black"/>
+    
+    <rect x="15" y="195" width="270" height="165" fill="white" stroke="#BF360C" stroke-width="3"/>
+    
+    <text x="25" y="220" font-weight="bold" font-size="10" fill="black">SHOW TO STAFF ({{LBL_STAFF}}):</text>
+    <text x="25" y="240" font-size="10" fill="black">"I have the right to know the cost.</text>
+    <text x="25" y="255" font-size="10" fill="black">Please write the estimate below."</text>
+    
+    <text x="25" y="280" class="font-sub" font-size="10" fill="black">"{{ADVOCACY_TEXT}}"</text>
+    
+    <text x="25" y="325" font-weight="bold" font-size="12" fill="black">ESTIMATED COST ({{LBL_COST}}):</text>
+    <text x="25" y="350" font-weight="bold" font-size="24" fill="black">$ ____________</text>
+  </g>
+</svg>

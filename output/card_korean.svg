@@ -12,7 +12,7 @@
     
     <text x="30" y="45" fill="white" class="font-main" font-size="24">I NEED AN</text>
     <text x="30" y="75" fill="white" class="font-main" font-size="24">INTERPRETER</text>
-    <text x="30" y="95" fill="white" class="font-sub" font-size="12" opacity="0.9">(통역사가 필요해요)</text>
+    <text x="30" y="95" fill="white" class="font-sub" font-size="12" opacity="0.9">(통역사가 필요합니다)</text>
     
     <text x="20" y="130" fill="#444" font-family="Arial" font-size="10">My Preferred Language:</text>
     <text x="150" y="180" text-anchor="middle" fill="#0D47A1" class="font-main" font-size="40">KOREAN</text>
@@ -45,7 +45,7 @@
        <circle cx="235" cy="10" r="10" fill="#B71C1C" stroke="#333"/><text x="235" y="14" text-anchor="middle" font-size="10" fill="white">10</text>
     </g>
 
-    <text x="150" y="160" text-anchor="middle" font-size="12" fill="black">Circle where it hurts (아픈 곳을 표시하세요):</text>
+    <text x="150" y="160" text-anchor="middle" font-size="12" fill="black">Circle where it hurts (아픈 곳 표시):</text>
     
     <g transform="translate(150, 235)" stroke="black" stroke-width="3" fill="none">
         <circle cx="0" cy="-25" r="15" /> 
@@ -74,14 +74,14 @@
     <line x1="20" y1="310" x2="280" y2="310" stroke="#ccc"/>
     
     <text x="25" y="200" font-size="10" font-weight="bold" fill="black">NAME (이름)</text>
-    <text x="190" y="200" font-size="10" font-weight="bold" fill="black">DOSE (복용량)</text>
+    <text x="190" y="200" font-size="10" font-weight="bold" fill="black">DOSE (용량)</text>
   </g>
 
   <g id="Panel_4" transform="translate(900, 0)">
     <rect x="0" y="0" width="300" height="380" fill="#FFF9C4" stroke="#ccc"/>
     
     <text x="20" y="40" fill="#BF360C" class="font-main" font-size="22">FINANCIAL RIGHTS</text>
-    <text x="20" y="65" fill="#BF360C" class="font-sub" font-size="14">(재정적 권리 및 보험)</text>
+    <text x="20" y="65" fill="#BF360C" class="font-sub" font-size="14">(재정 권리 및 보험)</text>
     
     <text x="20" y="100" font-size="12" fill="black">Insurance Provider (보험 제공자):</text>
     <line x1="20" y1="120" x2="280" y2="120" stroke="black"/>
@@ -91,11 +91,11 @@
     
     <rect x="15" y="195" width="270" height="165" fill="white" stroke="#BF360C" stroke-width="3"/>
     
-    <text x="25" y="220" font-weight="bold" font-size="10" fill="black">SHOW TO STAFF (직원에게 보여주세요):</text>
+    <text x="25" y="220" font-weight="bold" font-size="10" fill="black">SHOW TO STAFF (직원에게 보여주기):</text>
     <text x="25" y="240" font-size="10" fill="black">"I have the right to know the cost.</text>
     <text x="25" y="255" font-size="10" fill="black">Please write the estimate below."</text>
     
-    <text x="25" y="280" class="font-sub" font-size="10" fill="black">"비용을 알 권리가 있습니다. 아래에 견적을 작성해주세요."</text>
+    <text x="25" y="280" class="font-sub" font-size="10" fill="black">"비용을 알 권리가 있습니다. 아래에 견적을 작성해 주세요."</text>
     
     <text x="25" y="325" font-weight="bold" font-size="12" fill="black">ESTIMATED COST (예상 비용):</text>
     <text x="25" y="350" font-weight="bold" font-size="24" fill="black">$ ____________</text>

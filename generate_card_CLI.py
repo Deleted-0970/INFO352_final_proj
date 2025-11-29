@@ -72,16 +72,16 @@ def get_translation(client, target_language):
 def main():
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
-        print("Error: OPENAI_API_KEY not found in environment.")
+        print("OPENAI_API_KEY not found in environment.")
         return
     
     client = OpenAI(api_key=api_key)
 
     try:
-        with open("template.svg", "r", encoding="utf-8") as f:
+        with open("card_template.svg", "r", encoding="utf-8") as f:
             template = f.read()
     except FileNotFoundError:
-        print("'template.svg' not found.")
+        print("'card_template.svg' not found.")
         return
 
     output_folder = "output"
@@ -89,7 +89,6 @@ def main():
         os.makedirs(output_folder)
 
     while True:
-        print("\n" + "="*40)
         target_lang = input("Enter a language to generate (or 'q' to quit): ").strip()
         
         if target_lang.lower() == 'q':
@@ -100,6 +99,7 @@ def main():
         if translated_data:
             card_code = template
             
+            print("cleaning LLM input")
             raw_en = translated_data.get("{{LANG_EN}}", target_lang)
             clean_en = str(raw_en).replace("{", "").replace("}", "").replace("｛", "").replace("｝", "")
             translated_data["{{LANG_EN}}"] = clean_en

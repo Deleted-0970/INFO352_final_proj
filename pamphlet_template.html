@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Assistance Card</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; padding: 15px; }
+        .page { width: 8.5in; max-width: 100%; }
+        
+        h1 { font-size: 22px; margin-bottom: 8px; }
+        h2 { font-size: 16px; border-bottom: 2px solid #333; padding-bottom: 4px; margin: 12px 0 10px 0; }
+        h3 { font-size: 14px; margin-bottom: 6px; }
+        
+        .header-box { border: 2px solid #333; padding: 12px; margin-bottom: 15px; }
+        
+        .two-column { display: flex; gap: 20px; }
+        .column { flex: 1; }
+        
+        .section { margin-bottom: 15px; }
+        .field { margin-bottom: 10px; }
+        .field-line { border-bottom: 1px solid #333; min-width: 180px; display: inline-block; margin-left: 5px; }
+        .field-line-long { width: 100%; display: block; border-bottom: 1px solid #333; margin-top: 4px; height: 22px; }
+        
+        .phrase-item { margin-bottom: 8px; padding-left: 10px; }
+        
+        .symptom-grid { display: flex; gap: 25px; flex-wrap: wrap; }
+        .symptom-column { min-width: 160px; flex: 1; }
+        .symptom-column h3 { border-bottom: 1px solid #999; padding-bottom: 3px; margin-bottom: 6px; }
+        .symptom-item { margin-bottom: 6px; padding-left: 5px; }
+        .symptom-item input[type="checkbox"] { margin-right: 6px; width: 16px; height: 16px; }
+        
+        .condition-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
+        .condition-column { min-width: 200px; flex: 1; }
+        
+        .pain-scale { display: flex; justify-content: space-between; align-items: center; margin: 12px 0; padding: 12px; border: 1px solid #ccc; }
+        .pain-label { font-size: 13px; font-weight: bold; text-align: center; }
+        .pain-faces { display: flex; gap: 12px; font-size: 24px; line-height: 1; }
+        
+        .body-diagram { text-align: center; padding: 12px; border: 1px solid #ccc; margin-top: 12px; }
+        .body-diagram-label { font-weight: bold; margin-bottom: 10px; font-size: 14px; }
+        .body-placeholder { height: 200px; display: flex; align-items: center; justify-content: center; color: #999; border: 1px dashed #ccc; }
+        
+        .checkbox-item { margin-bottom: 6px; }
+        .checkbox-item input[type="checkbox"] { margin-right: 6px; width: 16px; height: 16px; }
+        
+        .rights-list { padding-left: 20px; }
+        .rights-list li { margin-bottom: 10px; }
+        
+        .medication-entry { border: 1px solid #ccc; padding: 8px; margin-bottom: 8px; }
+        .med-icons { margin-bottom: 5px; }
+        .med-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .med-table th, .med-table td { border: 1px solid #999; padding: 6px; text-align: left; }
+        .med-table th { background: #f5f5f5; font-weight: bold; }
+        .med-table td { height: 24px; }
+        
+        .emergency-note { font-weight: bold; text-align: center; margin-top: 10px; font-size: 15px; }
+        
+        .footer-note { font-size: 12px; color: #666; margin-top: 15px; padding-top: 8px; border-top: 1px solid #ccc; }
+        
+        @media print {
+            body { padding: 0; }
+            .page { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header Section -->
+        <div class="header-box">
+            <h1>I need an interpreter / __HEADER_NEED_INTERPRETER__</h1>
+            
+            <div style="margin-top: 10px; font-size: 14px; font-weight: bold;">
+                My preferred language is / __HEADER_PREFERRED_LANGUAGE__: ________________________
+            </div>
+            
+            <div style="margin-top: 8px;">
+                I don't understand medical information in English / __HEADER_DONT_UNDERSTAND__
+            </div>
+        </div>
+
+        <!-- Patient Rights Section -->
+        <div class="section">
+            <h2>Patient Rights / __SECTION_PATIENT_RIGHTS__</h2>
+            <p style="margin-bottom: 5px;">You have the right to: / __RIGHTS_INTRO__</p>
+            <ul class="rights-list">
+                <li>Free medical interpretation at any time during your visit / __RIGHTS_INTERPRETATION__</li>
+                <li>Ask staff to repeat or explain information until you understand / __RIGHTS_REPEAT_INFO__</li>
+                <li>Receive discharge instructions in your preferred language / __RIGHTS_DISCHARGE__</li>
+                <li>Request a cost estimate before treatment / __RIGHTS_COST_ESTIMATE__</li>
+            </ul>
+        </div>
+
+        <div class="two-column">
+            <!-- Left Column -->
+            <div class="column">
+                <!-- Common Phrases -->
+                <div class="section">
+                    <h2>Common Phrases / __SECTION_COMMON_PHRASES__</h2>
+                    <div class="phrase-item">
+                        "I don't understand." / __PHRASE_DONT_UNDERSTAND__
+                    </div>
+                    <div class="phrase-item">
+                        "I am in pain." / __PHRASE_IN_PAIN__
+                    </div>
+                    <div class="phrase-item">
+                        "Where is the bathroom?" / __PHRASE_BATHROOM__
+                    </div>
+                    <div class="phrase-item">
+                        "Please speak slowly." / __PHRASE_SPEAK_SLOWLY__
+                    </div>
+                    <div class="phrase-item">
+                        "I have someone who can interpret for me." / __PHRASE_HAVE_INTERPRETER__
+                        <div style="margin-top: 4px;">Phone: <span class="field-line"></span></div>
+                    </div>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="section">
+                    <h2>Personal Information / __SECTION_PERSONAL_INFO__</h2>
+                    <div class="field">
+                        Date of Birth / __FIELD_DATE_OF_BIRTH__: <span class="field-line"></span>
+                    </div>
+                    <div class="field">
+                        Blood Type / __FIELD_BLOOD_TYPE__: <span class="field-line"></span>
+                    </div>
+                    <div class="field">
+                        Primary Doctor / __FIELD_PRIMARY_DOCTOR__: <span class="field-line"></span>
+                    </div>
+                    <div class="field">
+                        Emergency Contact Phone / __FIELD_EMERGENCY_CONTACT__:
+                        <div class="field-line-long"></div>
+                    </div>
+                </div>
+
+                <div class="emergency-note">
+                    If emergency, please call 911 / __EMERGENCY_CALL_911__
+                </div>
+
+                <!-- Insurance Information -->
+                <div class="section" style="margin-top: 15px;">
+                    <h2>Insurance Information / __SECTION_INSURANCE__</h2>
+                    <div class="field">
+                        Insurance Provider / __FIELD_INSURANCE_PROVIDER__:
+                        <div class="field-line-long"></div>
+                    </div>
+                    <div class="field">
+                        ID Number / __FIELD_ID_NUMBER__:
+                        <div class="field-line-long"></div>
+                    </div>
+                    <div class="field">
+                        Group / Plan / __FIELD_GROUP_PLAN__:
+                        <div class="field-line-long"></div>
+                    </div>
+                </div>
+
+                <!-- Current Medical Conditions -->
+                <div class="section">
+                    <h2>Current Medical Conditions / __SECTION_CONDITIONS__</h2>
+                    <div class="condition-grid">
+                        <div class="condition-column">
+                            <div class="checkbox-item"><input type="checkbox"> Diabetes / __CONDITION_DIABETES__</div>
+                            <div class="checkbox-item"><input type="checkbox"> Heart Disease / __CONDITION_HEART_DISEASE__</div>
+                            <div class="checkbox-item"><input type="checkbox"> High Blood Pressure / __CONDITION_HIGH_BLOOD_PRESSURE__</div>
+                            <div class="checkbox-item"><input type="checkbox"> Asthma / __CONDITION_ASTHMA__</div>
+                        </div>
+                        <div class="condition-column">
+                            <div class="checkbox-item"><input type="checkbox"> Stroke / __CONDITION_STROKE__</div>
+                            <div class="checkbox-item"><input type="checkbox"> Cancer / __CONDITION_CANCER__</div>
+                            <div class="checkbox-item"><input type="checkbox"> Kidney Disease / __CONDITION_KIDNEY_DISEASE__</div>
+                            <div class="checkbox-item"><input type="checkbox"> Other / __CONDITION_OTHER__: __________</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column">
+                <!-- Pain Scale -->
+                <div class="section">
+                    <h2>Pain Scale / __SECTION_PAIN_SCALE__</h2>
+                    <div class="pain-scale">
+                        <div class="pain-label">Least<br>__PAIN_LEAST__</div>
+                        <div class="pain-faces">
+                            <span>😊</span>
+                            <span>🙂</span>
+                            <span>😐</span>
+                            <span>😟</span>
+                            <span>😢</span>
+                            <span>😭</span>
+                        </div>
+                        <div class="pain-label">Most<br>__PAIN_MOST__</div>
+                    </div>
+                </div>
+
+                <!-- Body Diagram -->
+                <div class="section">
+                    <div class="body-diagram">
+                        <div class="body-diagram-label">
+                            Circle the part that hurts / __BODY_DIAGRAM_INSTRUCTION__
+                        </div>
+                        <div class="body-placeholder">[Body Diagram Image Here]</div>
+                    </div>
+                </div>
+
+                <!-- Medications -->
+                <div class="section">
+                    <h2>Medications I Take / __SECTION_MEDICATIONS__</h2>
+                    <table class="med-table">
+                        <thead>
+                            <tr>
+                                <th>Medication / __TABLE_MEDICATION__</th>
+                                <th>Dose / __TABLE_DOSE__</th>
+                                <th>How Often / __TABLE_HOW_OFTEN__</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Mobility / Accessibility Needs -->
+                <div class="section">
+                    <h2>Mobility &amp; Accessibility / __SECTION_MOBILITY__</h2>
+                    <div class="condition-grid">
+                        <div class="condition-column">
+                            <div class="checkbox-item"><input type="checkbox"> Wheelchair / __MOBILITY_WHEELCHAIR__</div>
+                            <div class="checkbox-item"><input type="checkbox"> Walker / __MOBILITY_WALKER__</div>
+                        </div>
+                        <div class="condition-column">
+                            <div class="checkbox-item"><input type="checkbox"> Hearing Aid / __MOBILITY_HEARING_AID__</div>
+                            <div class="checkbox-item"><input type="checkbox"> Glasses / __MOBILITY_GLASSES__</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Symptoms Section - Full Width -->
+        <div class="section">
+            <h2>Symptom Assistance / __SECTION_SYMPTOMS__</h2>
+            <div class="symptom-grid">
+                <div class="symptom-column">
+                    <h3>Pain Description / __SUBSECTION_PAIN_DESCRIPTION__</h3>
+                    <div class="symptom-item"><input type="checkbox"> Sharp / __PAIN_SHARP__</div>
+                    <div class="symptom-item"><input type="checkbox"> Dull / __PAIN_DULL__</div>
+                    <div class="symptom-item"><input type="checkbox"> Burning / __PAIN_BURNING__</div>
+                    <div class="symptom-item"><input type="checkbox"> Pressure / __PAIN_PRESSURE__</div>
+                    <div class="symptom-item"><input type="checkbox"> Throbbing / __PAIN_THROBBING__</div>
+                    <div class="symptom-item"><input type="checkbox"> Numbness / __PAIN_NUMBNESS__</div>
+                </div>
+                <div class="symptom-column">
+                    <h3>Common Symptoms / __SUBSECTION_COMMON_SYMPTOMS__</h3>
+                    <div class="symptom-item"><input type="checkbox"> Nausea / __SYMPTOM_NAUSEA__</div>
+                    <div class="symptom-item"><input type="checkbox"> Vomiting / __SYMPTOM_VOMITING__</div>
+                    <div class="symptom-item"><input type="checkbox"> Dizziness / __SYMPTOM_DIZZINESS__</div>
+                    <div class="symptom-item"><input type="checkbox"> Fever / __SYMPTOM_FEVER__</div>
+                    <div class="symptom-item"><input type="checkbox"> Difficulty breathing / __SYMPTOM_DIFFICULTY_BREATHING__</div>
+                    <div class="symptom-item"><input type="checkbox"> Chest pain / __SYMPTOM_CHEST_PAIN__</div>
+                </div>
+                <div class="symptom-column">
+                    <h3>Common Allergies / __SUBSECTION_ALLERGIES__</h3>
+                    <div class="symptom-item"><input type="checkbox"> Peanut / __ALLERGY_PEANUT__</div>
+                    <div class="symptom-item"><input type="checkbox"> Medicine / __ALLERGY_MEDICINE__</div>
+                    <div class="symptom-item"><input type="checkbox"> Seafood / __ALLERGY_SEAFOOD__</div>
+                    <div class="symptom-item"><input type="checkbox"> Dairy / __ALLERGY_DAIRY__</div>
+                    <div class="symptom-item"><input type="checkbox"> Other / __ALLERGY_OTHER__: _________</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer-note">
+            <strong>Show this card to staff if you need help. / __FOOTER_SHOW_CARD__</strong>
+            <br><br>
+            Medical Translation Services (non-emergency): _________________ | Insurance Benefits Advisors: _________________
+        </div>
+    </div>
+</body>
+</html>

@@ -28,7 +28,7 @@
     <rect x="0" y="0" width="300" height="380" fill="#E3F2FD" stroke="#ccc"/>
     
     <text x="150" y="40" text-anchor="middle" fill="#01579B" class="font-main" font-size="22">IMMEDIATE NEEDS</text>
-    <text x="150" y="65" text-anchor="middle" fill="#01579B" class="font-sub" font-size="14">(즉각적인 필요)</text>
+    <text x="150" y="65" text-anchor="middle" fill="#01579B" class="font-sub" font-size="14">(즉각적인 요구)</text>
     
     <text x="20" y="100" class="font-main" font-size="12" fill="black">PAIN SCALE (통증 척도):</text>
     
@@ -45,7 +45,7 @@
        <circle cx="235" cy="10" r="10" fill="#B71C1C" stroke="#333"/><text x="235" y="14" text-anchor="middle" font-size="10" fill="white">10</text>
     </g>
 
-    <text x="150" y="160" text-anchor="middle" font-size="12" fill="black">Circle where it hurts (아픈 곳 표시):</text>
+    <text x="150" y="160" text-anchor="middle" font-size="12" fill="black">Circle where it hurts (아픈 곳을 동그라미로 표시하세요):</text>
     
     <g transform="translate(150, 235)" stroke="black" stroke-width="3" fill="none">
         <circle cx="0" cy="-25" r="15" /> 
@@ -74,7 +74,7 @@
     <line x1="20" y1="310" x2="280" y2="310" stroke="#ccc"/>
     
     <text x="25" y="200" font-size="10" font-weight="bold" fill="black">NAME (이름)</text>
-    <text x="190" y="200" font-size="10" font-weight="bold" fill="black">DOSE (용량)</text>
+    <text x="190" y="200" font-size="10" font-weight="bold" fill="black">DOSE (복용량)</text>
   </g>
 
   <g id="Panel_4" transform="translate(900, 0)">
@@ -95,7 +95,7 @@
     <text x="25" y="240" font-size="10" fill="black">"I have the right to know the cost.</text>
     <text x="25" y="255" font-size="10" fill="black">Please write the estimate below."</text>
     
-    <text x="25" y="280" class="font-sub" font-size="10" fill="black">"비용을 알 권리가 있습니다. 아래에 견적을 작성해 주세요."</text>
+    <text x="25" y="280" class="font-sub" font-size="10" fill="black">"비용을 알 권리가 있습니다. 아래에 견적을 적어주세요."</text>
     
     <text x="25" y="325" font-weight="bold" font-size="12" fill="black">ESTIMATED COST (예상 비용):</text>
     <text x="25" y="350" font-weight="bold" font-size="24" fill="black">$ ____________</text>

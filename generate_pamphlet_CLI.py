@@ -148,7 +148,7 @@ def main():
         return
     
     client = OpenAI(api_key=api_key)
-    template_filename = "pamphlet_template.html"
+    template_filename = "templates/pamphlet_template.html"
     try:
         with open(template_filename, "r", encoding="utf-8") as f:
             template = f.read()
@@ -156,7 +156,7 @@ def main():
         print(f"Error: '{template_filename}' not found. Please ensure it is in the same folder.")
         return
 
-    organ_image_data = load_image_as_base64("organ_diagram.jpg")
+    organ_image_data = load_image_as_base64("img/organ_diagram.jpg")
 
     output_folder = "output"
     if not os.path.exists(output_folder):
@@ -180,7 +180,7 @@ def main():
             
             card_code = card_code.replace("[Body Diagram Image Here]", img_tag)
 
-            # Cleaning & parsing LLM response
+            print("cleaning LLM response...")
             for key, value in translated_data.items():
                 clean_value = str(value).replace("{", "").replace("}", "").replace("｛", "").replace("｝", "")
                 card_code = card_code.replace(key, clean_value)

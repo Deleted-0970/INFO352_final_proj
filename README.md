@@ -13,3 +13,8 @@ Alternatively,
 run `python generate_pamphlet_CLI.py` and enter the name of the language you want to generate a pamphlet in
 
 The card will appear in `/output` as a `.html` file which you can print
+
+Example of card:
+![card](output/card_korean.svg)
+
+[Example of pamphlet](/output/pamphlet_german.html)

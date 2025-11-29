@@ -7,39 +7,31 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SOURCE_TEXT = {
-    # Header Section
     "__HEADER_NEED_INTERPRETER__": "I need an interpreter",
     "__HEADER_PREFERRED_LANGUAGE__": "My preferred language is",
     "__HEADER_DONT_UNDERSTAND__": "I don't understand medical information in English",
-    
-    # Patient Rights
     "__SECTION_PATIENT_RIGHTS__": "Patient Rights",
     "__RIGHTS_INTRO__": "You have the right to:",
     "__RIGHTS_INTERPRETATION__": "Free medical interpretation at any time during your visit",
     "__RIGHTS_REPEAT_INFO__": "Ask staff to repeat or explain information until you understand",
     "__RIGHTS_DISCHARGE__": "Receive discharge instructions in your preferred language",
     "__RIGHTS_COST_ESTIMATE__": "Request a cost estimate before treatment",
-    
-    # Left Column - Phrases & Info
     "__SECTION_COMMON_PHRASES__": "Common Phrases",
     "__PHRASE_DONT_UNDERSTAND__": "I don't understand.",
     "__PHRASE_IN_PAIN__": "I am in pain.",
     "__PHRASE_BATHROOM__": "Where is the bathroom?",
     "__PHRASE_SPEAK_SLOWLY__": "Please speak slowly.",
     "__PHRASE_HAVE_INTERPRETER__": "I have someone who can interpret for me.",
-    
     "__SECTION_PERSONAL_INFO__": "Personal Information",
     "__FIELD_DATE_OF_BIRTH__": "Date of Birth",
     "__FIELD_BLOOD_TYPE__": "Blood Type",
     "__FIELD_PRIMARY_DOCTOR__": "Primary Doctor",
     "__FIELD_EMERGENCY_CONTACT__": "Emergency Contact Phone",
     "__EMERGENCY_CALL_911__": "If emergency, please call 911",
-    
     "__SECTION_INSURANCE__": "Insurance Information",
     "__FIELD_INSURANCE_PROVIDER__": "Insurance Provider",
     "__FIELD_ID_NUMBER__": "ID Number",
     "__FIELD_GROUP_PLAN__": "Group / Plan",
-    
     "__SECTION_CONDITIONS__": "Current Medical Conditions",
     "__CONDITION_DIABETES__": "Diabetes",
     "__CONDITION_HEART_DISEASE__": "Heart Disease",
@@ -49,26 +41,19 @@ SOURCE_TEXT = {
     "__CONDITION_CANCER__": "Cancer",
     "__CONDITION_KIDNEY_DISEASE__": "Kidney Disease",
     "__CONDITION_OTHER__": "Other",
-    
-    # Right Column - Medical
     "__SECTION_PAIN_SCALE__": "Pain Scale",
     "__PAIN_LEAST__": "Least",
     "__PAIN_MOST__": "Most",
-    
     "__BODY_DIAGRAM_INSTRUCTION__": "Circle the part that hurts",
-    
     "__SECTION_MEDICATIONS__": "Medications I Take",
     "__TABLE_MEDICATION__": "Medication",
     "__TABLE_DOSE__": "Dose",
     "__TABLE_HOW_OFTEN__": "How Often",
-    
     "__SECTION_MOBILITY__": "Mobility & Accessibility",
     "__MOBILITY_WHEELCHAIR__": "Wheelchair",
     "__MOBILITY_WALKER__": "Walker",
     "__MOBILITY_HEARING_AID__": "Hearing Aid",
     "__MOBILITY_GLASSES__": "Glasses",
-    
-    # Bottom Section - Symptoms
     "__SECTION_SYMPTOMS__": "Symptom Assistance",
     "__SUBSECTION_PAIN_DESCRIPTION__": "Pain Description",
     "__PAIN_SHARP__": "Sharp",
@@ -77,7 +62,6 @@ SOURCE_TEXT = {
     "__PAIN_PRESSURE__": "Pressure",
     "__PAIN_THROBBING__": "Throbbing",
     "__PAIN_NUMBNESS__": "Numbness",
-    
     "__SUBSECTION_COMMON_SYMPTOMS__": "Common Symptoms",
     "__SYMPTOM_NAUSEA__": "Nausea",
     "__SYMPTOM_VOMITING__": "Vomiting",
@@ -85,14 +69,12 @@ SOURCE_TEXT = {
     "__SYMPTOM_FEVER__": "Fever",
     "__SYMPTOM_DIFFICULTY_BREATHING__": "Difficulty breathing",
     "__SYMPTOM_CHEST_PAIN__": "Chest pain",
-    
     "__SUBSECTION_ALLERGIES__": "Common Allergies",
     "__ALLERGY_PEANUT__": "Peanut",
     "__ALLERGY_MEDICINE__": "Medicine",
     "__ALLERGY_SEAFOOD__": "Seafood",
     "__ALLERGY_DAIRY__": "Dairy",
     "__ALLERGY_OTHER__": "Other",
-    
     "__FOOTER_SHOW_CARD__": "Show this card to staff if you need help."
 }
 
